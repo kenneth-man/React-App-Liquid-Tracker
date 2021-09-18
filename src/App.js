@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import ContextProvider from './Context';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './Pages/Home';
+import Nutrition from './Pages/Nutrition.js';
+import Alarm from './Pages/Alarm.js';
+import Settings from './Pages/Settings.js';
+import DrinkSelection from './Pages/DrinkSelection.js';
+import DrinkVolume from './Pages/DrinkVolume.js';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ContextProvider>
+        <BrowserRouter>
+          <Switch>
+            <Route path='/' exact={true} component={Home}/>
+
+            <Route path='/Nutrition' exact={true} component={Nutrition}/>
+
+            <Route path='/Alarm' exact={true} component={Alarm}/>
+
+            <Route path='/Settings' exact={true} component={Settings}/>
+
+            <Route path='/DrinkSelection' exact={true} component={DrinkSelection}/>
+
+            <Route path='/DrinkVolume/:selected' exact={true} component={DrinkVolume}/>
+          </Switch>
+        
+          <Navbar/>
+        </BrowserRouter>
+      </ContextProvider>
     </div>
   );
 }
