@@ -11,4 +11,3 @@ Video Demo: https://drive.google.com/file/d/1ebY7svqdvdv-q4mBuw9gSywSqTEJJnok/vi
 ![Alt text](./src/Res/home.png?raw=true "Home")
 ![Alt text](./src/Res/nutrition.png?raw=true "Nutrition")
 ![Alt text](./src/Res/alarm.png?raw=true "Alarm")
-![Alt text](./src/Res/settings.png?raw=true "Settings")
